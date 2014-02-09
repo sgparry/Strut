@@ -131,14 +131,14 @@ body {
     opacity: 0.3;
 
     -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
+    -moz-transition:    opacity 1s z-index 1s;
     -ms-transition:     opacity 1s;
     -o-transition:      opacity 1s;
     transition:         opacity 1s;
 }
 
 .impress-enabled .step.active { opacity: 1 }
-
+@-moz-document url-prefix() {.impress-enabled .step.active { opacity: 1.0; z-index: 10; -moz-transition: opacity 1s z-index 1s; } }
 
 /*
     And now we start to style each step separately.
